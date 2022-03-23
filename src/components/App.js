@@ -7,7 +7,11 @@ import StreamShow from './streams/StreamShow';
 import StreamList from './streams/StreamList';
 
 function App() {
-  return <div></div>;
+  return (
+    <BrowserRouter>
+      <Routes></Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
