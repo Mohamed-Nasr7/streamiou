@@ -9,7 +9,13 @@ import StreamList from './streams/StreamList';
 function App() {
   return (
     <BrowserRouter>
-      <Routes></Routes>
+      <Routes>
+        <Route path='/' element={<StreamList />} />
+        <Route path='/streams/new' element={<StreamCreate />} />
+        <Route path='/streams/edit' element={<StreamEdit />} />
+        <Route path='/streams/delete' element={<StreamDelete />} />
+        <Route path='/streams/show' element={<StreamShow />} />
+      </Routes>
     </BrowserRouter>
   );
 }
