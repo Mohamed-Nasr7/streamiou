@@ -5,10 +5,12 @@ import StreamEdit from './streams/StreamEdit';
 import StreamDelete from './streams/StreamDelete';
 import StreamShow from './streams/StreamShow';
 import StreamList from './streams/StreamList';
+import Header from './Header';
 
 function App() {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path='/' element={<StreamList />} />
         <Route path='/streams/new' element={<StreamCreate />} />
