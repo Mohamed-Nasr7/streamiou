@@ -7,6 +7,7 @@ function GoogleAuth() {
         clientId:
           '907558372126-iormelmouneobr1htfqna2mf7pvhnmkh.apps.googleusercontent.com',
         scope: 'email',
+        plugin_name: 'streamy',
       });
     });
   }, []);
