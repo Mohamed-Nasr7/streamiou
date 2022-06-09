@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 
 function GoogleAuth() {
   useEffect(() => {
-    window.gapi.load('client:auth2', () => {
-      window.gapi.client.init({
+    window.gapi.load('auth2', () => {
+      window.gapi.auth2.init({
         clientId:
           '907558372126-iormelmouneobr1htfqna2mf7pvhnmkh.apps.googleusercontent.com',
         scope: 'email',
