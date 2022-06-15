@@ -12,6 +12,7 @@ function GoogleAuth() {
         plugin_name: 'streamy',
       });
       const auth = window.gapi.auth2.getAuthInstance();
+      setIsSignedIn(auth.isSignedIn.get());
     });
   }, []);
 
