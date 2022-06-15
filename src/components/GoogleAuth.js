@@ -9,6 +9,7 @@ function GoogleAuth() {
         scope: 'email',
         plugin_name: 'streamy',
       });
+      const auth = window.gapi.auth2.getAuthInstance();
     });
   }, []);
 
