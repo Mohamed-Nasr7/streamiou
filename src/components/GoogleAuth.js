@@ -1,6 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function GoogleAuth() {
+  const [isSignedIn, setIsSignedIn] = useState(null);
+
   useEffect(() => {
     window.gapi.load('auth2', () => {
       window.gapi.auth2.init({
