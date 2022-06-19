@@ -21,8 +21,11 @@ function GoogleAuth() {
 
   const renderAuthButton = () => {
     if (isSignedIn === null) return null;
-    else if (isSignedIn) return <button>Sign out</button>;
-    else return <button>Sign in with google</button>;
+    else if (isSignedIn) {
+      return <button onClick={auth.signOut}>Sign out</button>;
+    } else {
+      return <button onClick={auth.signIn}>Sign in with google</button>;
+    }
   };
 
   return <div>{renderAuthButton()}</div>;
