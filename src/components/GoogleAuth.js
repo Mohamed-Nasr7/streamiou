@@ -13,6 +13,7 @@ function GoogleAuth() {
       });
       const auth = window.gapi.auth2.getAuthInstance();
       setIsSignedIn(auth.isSignedIn.get());
+      auth.isSignedIn.listen(() => setIsSignedIn(auth.isSignedIn.get()));
     });
   }, []);
 
