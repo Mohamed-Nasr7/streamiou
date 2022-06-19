@@ -18,7 +18,8 @@ function GoogleAuth() {
   }, []);
 
   const renderAuthButton = () => {
-    if (isSignedIn) return <p>Signed In</p>;
+    if (isSignedIn === null) return null;
+    else if (isSignedIn) return <p>Signed In</p>;
     else return <p>Signed Out</p>;
   };
 
