@@ -13,6 +13,7 @@ function GoogleAuth() {
         plugin_name: 'streamy',
       });
       const auth = window.gapi.auth2.getAuthInstance();
+      setAuth(auth);
       setIsSignedIn(auth.isSignedIn.get());
       auth.isSignedIn.listen(() => setIsSignedIn(auth.isSignedIn.get()));
     });
