@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 function GoogleAuth() {
+  const [auth, setAuth] = useState(null);
   const [isSignedIn, setIsSignedIn] = useState(null);
 
   useEffect(() => {
