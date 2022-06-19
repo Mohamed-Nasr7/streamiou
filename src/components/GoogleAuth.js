@@ -16,6 +16,11 @@ function GoogleAuth() {
     });
   }, []);
 
+  const renderAuthButton = () => {
+    if (isSignedIn) return <p>Signed In</p>;
+    else return <p>Signed Out</p>;
+  };
+
   return <div></div>;
 }
 
