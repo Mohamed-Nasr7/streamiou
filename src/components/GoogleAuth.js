@@ -21,7 +21,7 @@ function GoogleAuth() {
     else return <p>Signed Out</p>;
   };
 
-  return <div></div>;
+  return <div>{renderAuthButton()}</div>;
 }
 
 export default GoogleAuth;
