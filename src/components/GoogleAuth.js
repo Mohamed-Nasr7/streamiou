@@ -17,9 +17,13 @@ function GoogleAuth() {
       const auth = window.gapi.auth2.getAuthInstance();
       setAuth(auth);
       setIsSignedIn(auth.isSignedIn.get());
-      auth.isSignedIn.listen(() => setIsSignedIn(auth.isSignedIn.get()));
+      auth.isSignedIn.listen(onAuthChange);
     });
   }, []);
+
+  const onAuthChange = isSignedIn => {
+    console.log(isSignedIn);
+  };
 
   const renderAuthButton = () => {
     if (isSignedIn === null) return null;
