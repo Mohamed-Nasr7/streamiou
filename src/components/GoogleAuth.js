@@ -24,7 +24,8 @@ function GoogleAuth() {
   }, []);
 
   const onAuthChange = isSignedIn => {
-    console.log(isSignedIn);
+    if (isSignedIn) dispatch(signIn());
+    else dispatch(signOut());
   };
 
   const renderAuthButton = () => {
