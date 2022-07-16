@@ -7,6 +7,8 @@ import App from './components/App';
 import reducers from './reducers';
 import './index.css';
 
+const store = createStore(reducers);
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
