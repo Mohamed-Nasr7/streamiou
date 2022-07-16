@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 function GoogleAuth() {
   const [auth, setAuth] = useState(null);
   const [isSignedIn, setIsSignedIn] = useState(null);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     window.gapi.load('auth2', () => {
