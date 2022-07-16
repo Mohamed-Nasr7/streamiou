@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
+import { signIn, signOut } from '../actions';
+
 function GoogleAuth() {
   const [auth, setAuth] = useState(null);
   const [isSignedIn, setIsSignedIn] = useState(null);
